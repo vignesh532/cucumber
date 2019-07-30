@@ -43,7 +43,7 @@ public class AddTariff {
 		
 		driver.findElement(By.id("rental1")).sendKeys(tariff.get("monRent"));
 		driver.findElement(By.name("local_minutes")).sendKeys(tariff.get("flmin"));
-		driver.findElement(By.xpath("inter_minutes")).sendKeys(tariff.get("fim"));
+		driver.findElement(By.id("inter_minutes")).sendKeys(tariff.get("fim"));
 		driver.findElement(By.name("sms_pack")).sendKeys(tariff.get("fsp"));
 		driver.findElement(By.name("minutes_charges")).sendKeys(tariff.get("lpmc"));
 		driver.findElement(By.name("inter_charges")).sendKeys(tariff.get("ipmc"));
