@@ -69,6 +69,7 @@ public class AddCustomer  {
 	    driver.findElement(By.id("telephoneno")).sendKeys(cus.get("mobile"));
 	   
 	}
+
 	@When("User will click on the submit button")
 	public void user_will_click_on_the_submit_button() {
 	    

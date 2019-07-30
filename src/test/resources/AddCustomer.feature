@@ -1,8 +1,8 @@
-@tag
+@regression
 Feature: Title of your feature
   I want to use this template for my feature file
 
-  @tag1
+  @smoke @vignesh
   Scenario: Need to create a new customer
     Given User is in the homepage of site
     And User click on the add button
