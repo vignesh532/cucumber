@@ -1,30 +1,25 @@
 package com.stepdefinition;
 
-import java.util.Map;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.objecrepository.AddTariffPage;
+import com.objecrepository.HomePage;
+import com.resources.FunctionalLibrary;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.cucumber.datatable.DataTable;
-public class AddTariff {
+public class AddTariff extends FunctionalLibrary {
 	static WebDriver driver;
-	@Given("User is in the homepage")
-	public void user_is_in_the_homepage() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "E:\\Selenium Project\\WorkSpace\\CucmberPro\\Driver\\chromedriver.exe");
-	    driver= new ChromeDriver();
-	    driver.get("http://demo.guru99.com/telecom");  
-	    driver.manage().window().maximize();
-	}
-	@Given("User click on the Add tariff button")
-	public void user_click_on_the_Add_tariff_button() {
+	HomePage hp=new HomePage();
+	AddTariffPage addpage=new AddTariffPage();	
+	
 		
-		driver.findElement(By.xpath("//a[text()='Add Tariff Plan']")).click();    
-	}
+		
+	
 /*	@When("User is entering the details")
 	public void user_is_entering_the_details(DataTable tariffDetails) {
 		List<String> tariffPlan = tariffDetails.asList(String.class);
@@ -38,23 +33,23 @@ public class AddTariff {
 		driver.findElement(By.name("sms_charges")).sendKeys(tariffPlan.get(6));	     
 	}*/
 	@When("User is entering the detailss")
-	public void user_is_entering_the_detailss(DataTable dataMap) {
-		Map<String, String> tariff = dataMap.asMap(String.class, String.class);
+	public void user_is_entering_the_detailss() {
+		 
 		
-		driver.findElement(By.id("rental1")).sendKeys(tariff.get("monRent"));
-		driver.findElement(By.name("local_minutes")).sendKeys(tariff.get("flmin"));
-		driver.findElement(By.id("inter_minutes")).sendKeys(tariff.get("fim"));
-		driver.findElement(By.name("sms_pack")).sendKeys(tariff.get("fsp"));
-		driver.findElement(By.name("minutes_charges")).sendKeys(tariff.get("lpmc"));
-		driver.findElement(By.name("inter_charges")).sendKeys(tariff.get("ipmc"));
-		driver.findElement(By.name("sms_charges")).sendKeys(tariff.get("spc"));	
-	   
+		buttonClick(hp.getAddTariffPlan());
+		enterText(addpage.getRental(), "500");
+		enterText(addpage.getLocalMinutes(), "100");
+		enterText(addpage.getFreeIntMin(), "50");
+		enterText(addpage.getFreeSmsPack(), "60");
+		enterText(addpage.getLocalMinChrg(), "3");
+		enterText(addpage.getInterMinChrg(), "500");
+		enterText(addpage.getSmsChrg(), "500");
 	}
 
 	
 	@When("User is clicking on submit")
 	public void user_is_clicking_on_submit() {
-	     driver.findElement(By.xpath("//input[@type='submit']")).click();
+	     buttonClick(addpage.getSubmit());
 	    
 	}
 

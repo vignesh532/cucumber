@@ -12,90 +12,23 @@
         "steps": [
           {
             "result": {
-              "duration": 12889195655,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "User is in the homepage",
-            "match": {
-              "location": "AddTariff.user_is_in_the_homepage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 5035620704,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy16.click(Unknown Source)\r\n\tat com.resources.FunctionalLibrary.buttonClick(FunctionalLibrary.java:47)\r\n\tat com.stepdefinition.AddTariff.user_is_entering_the_detailss(AddTariff.java:39)\r\n\tat ✽.User is entering the detailss(src/test/resources/AddTariff.feature:8)\r\n",
+              "duration": 52627933,
+              "status": "failed"
             },
             "line": 8,
-            "name": "User click on the Add tariff button",
-            "match": {
-              "location": "AddTariff.user_click_on_the_Add_tariff_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 684433057,
-              "status": "passed"
-            },
-            "line": 9,
             "name": "User is entering the detailss",
             "match": {
-              "location": "AddTariff.user_is_entering_the_detailss(DataTable)"
+              "location": "AddTariff.user_is_entering_the_detailss()"
             },
-            "rows": [
-              {
-                "cells": [
-                  "monRent",
-                  "500"
-                ]
-              },
-              {
-                "cells": [
-                  "flmin",
-                  "50"
-                ]
-              },
-              {
-                "cells": [
-                  "fim",
-                  "20"
-                ]
-              },
-              {
-                "cells": [
-                  "fsp",
-                  "15"
-                ]
-              },
-              {
-                "cells": [
-                  "lpmc",
-                  "2"
-                ]
-              },
-              {
-                "cells": [
-                  "ipmc",
-                  "10"
-                ]
-              },
-              {
-                "cells": [
-                  "spc",
-                  "3"
-                ]
-              }
-            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 4307016887,
-              "status": "passed"
+              "duration": 21553,
+              "status": "skipped"
             },
-            "line": 17,
+            "line": 9,
             "name": "User is clicking on submit",
             "match": {
               "location": "AddTariff.user_is_clicking_on_submit()"
@@ -104,10 +37,10 @@
           },
           {
             "result": {
-              "duration": 42114457,
-              "status": "passed"
+              "duration": 17962,
+              "status": "skipped"
             },
-            "line": 18,
+            "line": 10,
             "name": "User verify the tariff plan is added sucessfully",
             "match": {
               "location": "AddTariff.user_verify_the_tariff_plan_is_added_sucessfully()"
@@ -130,139 +63,6 @@
     "id": "title-of-your-feature",
     "keyword": "Feature",
     "uri": "src/test/resources/AddTariff.feature",
-    "tags": [
-      {
-        "name": "@regression",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
-  },
-  {
-    "line": 2,
-    "elements": [
-      {
-        "line": 6,
-        "name": "Need to create a new customer",
-        "description": "",
-        "id": "title-of-your-feature;need-to-create-a-new-customer",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 19477828662,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "User is in the homepage of site",
-            "match": {
-              "location": "AddCustomer.user_is_in_the_homepage_of_site()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 25295368774,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "User click on the add button",
-            "match": {
-              "location": "AddCustomer.user_click_on_the_add_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6126301291,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "User will enter the details",
-            "match": {
-              "location": "AddCustomer.user_will_enter_the_details(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "fname",
-                  "Vignesh"
-                ]
-              },
-              {
-                "cells": [
-                  "lname",
-                  "Babu"
-                ]
-              },
-              {
-                "cells": [
-                  "mail",
-                  "vignesh@gmail.com"
-                ]
-              },
-              {
-                "cells": [
-                  "add",
-                  "Salem"
-                ]
-              },
-              {
-                "cells": [
-                  "mobile",
-                  "9790230532"
-                ]
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2911396758,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "User will click on the submit button",
-            "match": {
-              "location": "AddCustomer.user_will_click_on_the_submit_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1405297125,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "User will validate whether customer id is generated",
-            "match": {
-              "location": "AddCustomer.user_will_validate_whether_customer_id_is_generated()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@regression"
-          },
-          {
-            "name": "@smoke"
-          },
-          {
-            "name": "@vignesh"
-          }
-        ]
-      }
-    ],
-    "name": "Title of your feature",
-    "description": "  I want to use this template for my feature file",
-    "id": "title-of-your-feature",
-    "keyword": "Feature",
-    "uri": "src/test/resources/Addcustomer.feature",
     "tags": [
       {
         "name": "@regression",
