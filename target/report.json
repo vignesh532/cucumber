@@ -3,21 +3,42 @@
     "line": 2,
     "elements": [
       {
+        "before": [
+          {
+            "result": {
+              "duration": 6885577237,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.beforeBackground()"
+            }
+          }
+        ],
         "line": 6,
         "name": "Title of your scenario",
         "description": "",
         "id": "title-of-your-feature;title-of-your-scenario",
+        "after": [
+          {
+            "result": {
+              "duration": 2341311025,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.afterScenario()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy16.click(Unknown Source)\r\n\tat com.resources.FunctionalLibrary.buttonClick(FunctionalLibrary.java:47)\r\n\tat com.stepdefinition.AddTariff.user_is_entering_the_detailss(AddTariff.java:39)\r\n\tat ✽.User is entering the detailss(src/test/resources/AddTariff.feature:8)\r\n",
-              "duration": 52627933,
-              "status": "failed"
+              "duration": 9876869635,
+              "status": "passed"
             },
             "line": 8,
-            "name": "User is entering the detailss",
+            "name": "Enter the tariff fields",
             "match": {
               "location": "AddTariff.user_is_entering_the_detailss()"
             },
@@ -25,8 +46,8 @@
           },
           {
             "result": {
-              "duration": 21553,
-              "status": "skipped"
+              "duration": 7020113494,
+              "status": "passed"
             },
             "line": 9,
             "name": "User is clicking on submit",
@@ -37,23 +58,12 @@
           },
           {
             "result": {
-              "duration": 17962,
-              "status": "skipped"
+              "status": "undefined"
             },
             "line": 10,
-            "name": "User verify the tariff plan is added sucessfully",
-            "match": {
-              "location": "AddTariff.user_verify_the_tariff_plan_is_added_sucessfully()"
-            },
+            "name": "Validate that the tariff is updated",
+            "match": {},
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@regression"
-          },
-          {
-            "name": "@sanity"
           }
         ]
       }
@@ -63,15 +73,6 @@
     "id": "title-of-your-feature",
     "keyword": "Feature",
     "uri": "src/test/resources/AddTariff.feature",
-    "tags": [
-      {
-        "name": "@regression",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "tags": []
   }
 ]

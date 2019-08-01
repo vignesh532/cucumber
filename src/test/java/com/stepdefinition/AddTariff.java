@@ -2,20 +2,15 @@ package com.stepdefinition;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.objecrepository.AddTariffPage;
 import com.objecrepository.HomePage;
 import com.resources.FunctionalLibrary;
 
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 public class AddTariff extends FunctionalLibrary {
-	static WebDriver driver;
-	HomePage hp=new HomePage();
-	AddTariffPage addpage=new AddTariffPage();	
+	
 	
 		
 		
@@ -32,24 +27,29 @@ public class AddTariff extends FunctionalLibrary {
 		driver.findElement(By.name("inter_charges")).sendKeys(tariffPlan.get(5));
 		driver.findElement(By.name("sms_charges")).sendKeys(tariffPlan.get(6));	     
 	}*/
-	@When("User is entering the detailss")
+	@When("Enter the tariff fields")
 	public void user_is_entering_the_detailss() {
-		 
+		HomePage hp=new HomePage();
+		AddTariffPage addpage=new AddTariffPage();	
 		
-		buttonClick(hp.getAddTariffPlan());
-		enterText(addpage.getRental(), "500");
-		enterText(addpage.getLocalMinutes(), "100");
-		enterText(addpage.getFreeIntMin(), "50");
-		enterText(addpage.getFreeSmsPack(), "60");
-		enterText(addpage.getLocalMinChrg(), "3");
-		enterText(addpage.getInterMinChrg(), "500");
-		enterText(addpage.getSmsChrg(), "500");
+		
+		button(hp.getAddTariffPlan());
+		type(addpage.getRental(), "500");
+		type(addpage.getLocalMinutes(), "100");
+		type(addpage.getFreeIntMin(), "50");
+		type(addpage.getFreeSmsPack(), "60");
+		type(addpage.getLocalMinChrg(), "3");
+		type(addpage.getInterMinChrg(), "500");
+		type(addpage.getSmsChrg(), "500");
 	}
 
 	
+	
+
 	@When("User is clicking on submit")
 	public void user_is_clicking_on_submit() {
-	     buttonClick(addpage.getSubmit());
+		AddTariffPage addpage=new AddTariffPage();	 
+		button(addpage.getSubmit());
 	    
 	}
 

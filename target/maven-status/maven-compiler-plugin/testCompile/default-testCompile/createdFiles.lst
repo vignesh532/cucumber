@@ -1,0 +1,11 @@
+com\objecrepository\AddTariffPage.class
+com\stepdefinition\AddTariff.class
+com\stepdefinition\AddCustomerSteps.class
+com\stepdefinition\TestRunner.class
+com\objecrepository\HomePage.class
+com\stepdefinition\MultiTariff.class
+com\stepdefinition\MultiCustomer.class
+com\stepdefinition\TestReRunner.class
+com\objecrepository\AddCustomerPage.class
+com\resources\FunctionalLibrary.class
+com\stepdefinition\Hook.class

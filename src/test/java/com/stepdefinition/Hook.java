@@ -1,23 +1,23 @@
 package com.stepdefinition;
 
-import org.junit.After;
-import org.junit.Before;
-
 import com.resources.FunctionalLibrary;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 
 public class Hook extends FunctionalLibrary {
 	
 	@Before
 	public void beforeBackground() {
 		
-getDriver();
-enterUrl("http://demo.guru99.com/telecom/");
+	      launch("http://demo.guru99.com/telecom/");
 	}
+
 	
 	@After
-	public void afterBackground() {
-		driver.quit();
+	public void afterScenario() {
+		
+		driver.close();
 
 	}
-
 }

@@ -19,7 +19,7 @@ public class HomePage extends FunctionalLibrary {
 	@FindBy(xpath="(//a[text()='Add Tariff Plan to Customer'])[1]")
 	private WebElement addTariffToCustomer;
 	
-	@FindBy(xpath="//a[text()='Add Tariff Plan'])")
+	@FindBy(xpath="//a[text()='Add Tariff Plan']")
 	private WebElement addTariffPlan;
 	
 	@FindBy(xpath="(//a[text()='Pay Billing'])[1]")
