@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 6885577237,
+              "duration": 7892144375,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 2341311025,
+              "duration": 2346448963,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9876869635,
+              "duration": 3243783619,
               "status": "passed"
             },
             "line": 8,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 7020113494,
+              "duration": 1116354364,
               "status": "passed"
             },
             "line": 9,
@@ -58,11 +58,14 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 154831929,
+              "status": "passed"
             },
             "line": 10,
             "name": "Validate that the tariff is updated",
-            "match": {},
+            "match": {
+              "location": "AddTariff.user_verify_the_tariff_plan_is_added_sucessfully()"
+            },
             "keyword": "Then "
           }
         ]

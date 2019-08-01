@@ -2,7 +2,6 @@ package com.stepdefinition;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-
 import com.objecrepository.AddCustomerPage;
 import com.objecrepository.HomePage;
 import com.resources.FunctionalLibrary;
@@ -12,10 +11,6 @@ import cucumber.api.java.en.When;
 
 public class AddCustomerSteps extends FunctionalLibrary{
 
-	
-
-	
-
 	@When("I need to enter the fields present")
 	public void i_need_to_enter_the_fields_present() throws InterruptedException {
 		Thread.sleep(5000);
@@ -24,11 +19,11 @@ public class AddCustomerSteps extends FunctionalLibrary{
 		
 	  button(page.getAddCustomer());
 	    button(page2.getRadioButton());
-	    type(page2.getFirstName(), "karthi");
-	    type(page2.getLastName(), "rajan");
-	    type(page2.getMail(), "rrrr@gmail.com");
-	    driver.findElement(By.xpath("//textarea[@name='addr']")).sendKeys("nellai");
-	    driver.findElement(By.id("telephoneno")).sendKeys("9789931161");
+	    type(page2.getFirstName(), "Vignesh");
+	    type(page2.getLastName(), "babu");
+	    type(page2.getMail(), "vignesh@gmail.com");
+	    driver.findElement(By.xpath("//textarea[@name='addr']")).sendKeys("Salem");
+	    driver.findElement(By.id("telephoneno")).sendKeys("9790230532");
 	    
 	    
 	}

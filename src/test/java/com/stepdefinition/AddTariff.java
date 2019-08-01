@@ -53,7 +53,7 @@ public class AddTariff extends FunctionalLibrary {
 	    
 	}
 
-	@Then("User verify the tariff plan is added sucessfully")
+	@Then("Validate that the tariff is updated")
 	public void user_verify_the_tariff_plan_is_added_sucessfully() {
 	    
 	    Assert.assertTrue(driver.findElement(By.xpath("//h2[text()='Congratulation you add Tariff Plan']")).isDisplayed());

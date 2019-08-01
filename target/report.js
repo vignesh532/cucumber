@@ -36,9 +36,11 @@ formatter.step({
   "name": "Validate that the tariff is updated",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "AddTariff.user_verify_the_tariff_plan_is_added_sucessfully()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"
